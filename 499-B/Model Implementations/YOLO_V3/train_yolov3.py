@@ -10,6 +10,7 @@ Original file is located at
 # Check if NVIDIA GPU is enabled
 !nvidia-smi
 
+# Mounting Google Drive
 from google.colab import drive
 drive.mount('/content/gdrive')
 !ln -s /content/gdrive/My\ Drive/ /mydrive
@@ -90,3 +91,4 @@ file.close()
 
 # Start the training
 !./darknet detector train data/obj.data cfg/yolov3_training.cfg darknet53.conv.74 -dont_show
+# Training will continue until manual interrupt.
